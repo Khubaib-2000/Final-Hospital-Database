@@ -1,0 +1,118 @@
+/* Container for FindDoctor page */
+.find-doctor-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    min-height: 100vh; /* Ensure the container fills the screen */
+    position: relative;
+    padding-top: 60px; /* Adjust for navbar if it's fixed */
+}
+
+/* Sticky header */
+.find-doctor-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #f9f9f9; /* Prevent overlap with background */
+    z-index: 10;
+    padding: 10px 0; /* Optional for spacing */
+}
+
+/* Doctor grid styles */
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-height: calc(100vh - 150px); /* Allow scrolling within grid */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-bottom: 20px;
+}
+
+/* Doctor card styles */
+.doctor-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for doctor card */
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Title inside the card */
+.doctor-card h2 {
+    color: #007bff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Text inside the card */
+.doctor-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Button inside the card */
+.doctor-card button {
+    background-color: rgb(9, 205, 15);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.doctor-card button:hover {
+    background-color: hsl(256, 92%, 47%);
+}
+
+/* Change the color of the "Patient Feedback" button to blue */
+.doctor-card button.feedback-button {
+    background-color: #e3121c; /* Blue color */
+    color: #2b3bb7;
+}
+
+.doctor-card button.feedback-button:hover {
+    background-color: #ed0c50c8; /* Darker blue on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .doctor-grid {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    .find-doctor-container h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .doctor-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+    }
+
+    .doctor-card {
+        padding: 20px;
+    }
+
+    .doctor-card h2 {
+        font-size: 22px;
+    }
+
+    .doctor-card p {
+        font-size: 18px;
+    }
+}

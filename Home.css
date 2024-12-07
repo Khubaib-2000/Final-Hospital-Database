@@ -1,0 +1,181 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Full height for scrollable layout */
+    overflow-x: hidden; /* No horizontal scrollbars */
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Home Page Container */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full screen height layout */
+}
+
+/* Header */
+.home-header {
+    background-color: #fdfafa;
+    text-align: center;
+    position: fixed; /* Keeps the header fixed */
+    width: 100%;
+    top: 0; /* Stick to the top of the page */
+    padding: 70px 0 20px 0; /* Adjust padding with percentage to make it responsive */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Ensure it stays above other content */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    height: 15px;
+    margin-top: 10px;
+}
+
+.home-header h1 {
+    font-size: 2.5rem;
+    color: #080808;
+}
+
+/* Main Content */
+.home-content {
+    flex: 1;
+    padding: 20px;
+    padding-top: 120px; /* Adjust padding to avoid overlap with the header */
+    margin-top: 1200px; /* Adjust margin-top as per your previous requirement */
+    overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+/* Section Styling */
+.section {
+    margin: 1px;
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    padding: 3% 0 2% 0;
+    background-color: pink;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible grid */
+    gap: 10px;
+    padding: 4.5%;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.grid-item h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Adjustments for Larger Screens (Desktops/Laptops) */
+@media (min-width: 1024px) {
+    .section h2 {
+        font-size: 2.5rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Display 3 items in a row */
+        gap: 30px;
+    }
+
+    .grid-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .grid-item p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .home-header h1 {
+        font-size: 2rem; /* Slightly smaller font size for smaller screens */
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .grid-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .grid-item p {
+        font-size: 1rem;
+    }
+}
+
+/* Specific Adjustments for Screens around 1366px width */
+@media (max-width: 1366px) {
+    .home-header {
+        padding: 6% 0 5% 0; /* Slightly larger padding for readability */
+    }
+
+    .grid-container {
+        padding: 3%; /* Reduce padding on smaller screens */
+    }
+
+    .section h2 {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .grid-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .grid-item p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Specific Adjustments for Very Small Screens (below 355px) */
+@media (max-width: 355px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-header h1 {
+        font-size: 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.2rem;
+    }
+
+    .grid-item h3 {
+        font-size: 1rem;
+    }
+
+    .grid-item p {
+        font-size: 0.9rem;
+    }
+}

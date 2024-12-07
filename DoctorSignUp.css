@@ -1,0 +1,100 @@
+/* Page container */
+.doctor-signup-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-top: 80px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+
+/* Form container */
+.doctor-signup-container {
+  width: 100%; /* Take full width of the page */
+  max-width: 1200px; /* Limit maximum width for readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between heading and form */
+}
+
+/* Heading styles */
+.doctor-signup-container h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0; /* Reset default margins */
+  padding: 10px 0;
+  color: #333;
+}
+
+/* Form styling */
+.doctor-signup-form {
+  width: 100%; /* Form takes full width of the container */
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+  gap: 15px; /* Space between fields */
+  background: rgb(248, 247, 247);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box; /* Prevent padding issues */
+}
+
+/* Input, select, and textarea styles */
+.doctor-signup-form input,
+.doctor-signup-form select,
+.doctor-signup-form textarea {
+  width: 100%; /* Field spans full column width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Password field styling */
+.doctor-signup-form input[type="password"] {
+  grid-column: span 3; /* Password spans all three columns */
+}
+
+/* Button styling */
+.doctor-signup-form button {
+  grid-column: span 3; /* Submit button spans all three columns */
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.doctor-signup-form button:hover {
+  background-color: #218838;
+}
+
+/* Field focus styling */
+.doctor-signup-form input:focus,
+.doctor-signup-form select:focus,
+.doctor-signup-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+  .doctor-signup-form {
+    grid-template-columns: 1fr; /* Single-column layout on small screens */
+  }
+
+  .doctor-signup-form button {
+    grid-column: span 1; /* Match button to single-column layout */
+  }
+}

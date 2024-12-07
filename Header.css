@@ -1,0 +1,24 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-container {
+    width: 100%; /* Full width */
+    background-color: #f30707; /* Light grey background for visibility */
+    height: 150px; /* Fixed height for the header box */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Horizontally center the content */
+    align-items: flex-start; /* Align content at the top */
+    padding-top: 10px 0 10px 0; /* Add space between top edge and text */
+    border-bottom: 12px solid #4707f8; /* Optional: Add a border to separate the header */
+}
+
+.header-text {
+    font-size: 2rem; /* Font size for the header text */
+    font-weight: bold;
+    color: #333; /* Dark text for contrast */
+    text-align: center; /* Center the text horizontally */
+}
